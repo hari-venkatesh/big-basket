@@ -1,0 +1,10 @@
+
+{
+    "name": "Big-Basket by Hari",
+    "short_name": "Big-Basket",
+    "start_url": "index.html",
+    "scope": "./",
+    "theme_color": "#ffd31d",
+    "background_color": "#333",
+    "display": "standalone"
+  }
