@@ -1,10 +1,28 @@
 <template>
-  <h1> Products </h1>
-  <h1> Products </h1>
+  
+  <main class="wrapper">
+    <h1 style="margin-bottom: 15px;">Products</h1>
+
+    <div class="card-container">
+      <ProductCard
+        v-for="(product, index) in inventory"
+        :key="product.id"
+        class="card"
+        :index="index"
+        :product="product"
+        :addToCart="addToCart"
+      />
+    </div>
+  </main>
 </template>
 
 <script>
-export default {
-  name: 'Products'
-}
+  import ProductCard from '../components/ProductCard.vue';
+
+  export default {
+    props: ["inventory", "addToCart"],
+    components: {
+      ProductCard
+    }
+  }
 </script>
